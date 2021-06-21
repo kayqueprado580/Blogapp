@@ -1,0 +1,17 @@
+<h1>Categoria: {{categoria.nome}}</h1>
+<hr>
+<h2>Postagem Recentes:</h2>
+{{#each postagens}}
+<div class="card mt-2">
+    <div class="card-body">
+        <h3>{{titulo}}</h3>
+        <p>{{descricao}}</p>
+        <a href="/postagem/{{slug}}"><button class="btn btn-success bt-sm">Leia Mais</button></a>
+        <hr>
+        <small>Categoria: {{categoria.nome}} - </small>
+        <small>Data Publicação: {{date}}</small>
+    </div>
+</div>
+{{else}}
+<h5>Nenhuma Postagem</h5>
+{{/each}}
