@@ -6,8 +6,8 @@ Hospedado em heroku: https://quiet-badlands-17299.herokuapp.com/usuarios/registr
 
 Esse projeto foi desenvolvido com as seguintes tecnologias: 
 
-Frontend: HTML,CSS,JavaScript 
+Frontend: HTML,CSS,JavaScript(handlebars)
 
-Backend: NodeJS(express,mongoose,passport,handlebars)
+Backend: NodeJS(express,mongoose,passport)
 
 Base de Dados: MongoDB
