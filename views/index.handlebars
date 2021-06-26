@@ -1,25 +1,24 @@
 <div class="jumbotron">
     <h1 class="display-4">Bem vindo!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-        featured content or information.</p>
+    <p class="lead">Esse é um prototipo de um blog feito para estudos sobre a linguagem Javascript</p>
     <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Crie uma conta</a>
-    </p>
+    <p>Aplicação feita em HTML, CSS, Javascript(Nodejs, Express, handlebars, bcryptjs, passport) e MongoDB</p>
+    {{!-- <p class="lead">
+        <a class="btn btn-warning btn-sm" href="#" role="button">Criar Usuario</a>
+    </p> --}}
 </div>
 
-<hr>
-<h2>Postagem Recentes:</h2>
+<hr class="mb-2">
+<h2 class="text-center my-4 h2">Postagens</h2>
 {{#each postagens}}
 <div class="card mt-2">
     <div class="card-body">
         <h3>{{titulo}}</h3>
         <p>{{descricao}}</p>
-        <a href="/postagem/{{slug}}"><button class="btn btn-success bt-sm">Leia Mais</button></a>
-        <hr>
-        <small>Categoria: {{categoria.nome}} - </small>
-        <small>Data Publicação: {{date}}</small>
+        <a href="/postagem/{{slug}}"><button class="btn btn-outline-success btn-sm float-end">Postagem completa</button></a>
+        <hr class="mt-5">
+        <small>Categoria: {{categoria.nome}}</small>
+        <small class="float-end">Publicação: {{date}}</small>
     </div>
 </div>
 {{else}}

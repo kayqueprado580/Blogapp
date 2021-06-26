@@ -1,4 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Blog</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -6,16 +7,18 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      {{!-- <li class="nav-item active">
         <a class="nav-link" href="/">Home</a>
-      </li>
+      </li> --}}
       <li class="nav-item active">
         <a class="nav-link" href="/categorias">Categorias</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/admin/postagens">Postagens</a>
-      </li>
       {{#if user}}
+      <li class="nav-item me-2">
+        <a class="nav-link" href="admin/postagens/add">Nova Postagem</a>
+      </li>
+      {{/if}}
+      {{!-- {{#if user}}
       <li class="nav-item">
         <a class="nav-link" href="/usuarios/logout">Sair</a>
       </li>
@@ -26,7 +29,17 @@
       <li class="nav-item">
         <a class="nav-link" href="/usuarios/registro">Registro</a>
       </li>
-      {{/if}}
+      {{/if}} --}}
     </ul>
+
+    <form class="d-flex">
+      {{#if user}}
+      <a href="/usuarios/logout"><button class="btn btn-sm btn-outline-secondary" type="button">Sair</button></a>
+      {{else}}
+      <a href="/usuarios/login"><button class="btn btn-sm btn-outline-secondary me-2" type="button">Login</button></a>
+      <a href="/usuarios/registro"><button class="btn btn-sm btn-outline-success" type="button">Criar conta</button></a>
+      {{/if}}
+    </form>
+
   </div>
 </nav>

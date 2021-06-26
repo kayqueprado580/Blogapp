@@ -1,15 +1,14 @@
-<h1>Categoria: {{categoria.nome}}</h1>
-<hr>
-<h2>Postagem Recentes:</h2>
+<h2 class="h2">Categoria: {{categoria.nome}}</h2>
+<hr class="mb-2">
+<h2 class="text-center my-4 h2">Postagens</h2>
 {{#each postagens}}
 <div class="card mt-2">
     <div class="card-body">
         <h3>{{titulo}}</h3>
         <p>{{descricao}}</p>
-        <a href="/postagem/{{slug}}"><button class="btn btn-success bt-sm">Leia Mais</button></a>
-        <hr>
-        <small>Categoria: {{categoria.nome}} - </small>
-        <small>Data Publicação: {{date}}</small>
+        <a href="/postagem/{{slug}}"><button class="btn btn-outline-success btn-sm float-end">Postagem completa</button></a>
+        <hr class="mt-5">
+        <small class="float-end">Publicação: {{date}}</small>
     </div>
 </div>
 {{else}}

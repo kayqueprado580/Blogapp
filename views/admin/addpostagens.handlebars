@@ -4,29 +4,50 @@
 
 {{/each}}
 
-<h3>Nova Postagem</h3>
-<div class="card">
-    <div class="card-body"></div>
-    <form action="/admin/postagens/nova" method="POST">
-        <label for="titulo">Titulo: </label>
-        <input class="form-control" type="text" id="titulo" name="titulo" placeholder="Titulo">
-        <label for="slug">Slug: </label>
-        <input class="form-control" type="text" id="slug" name="slug" placeholder="Slug">
-        <label for="categoria">Categoria: </label>
-        <select class="custom-select mt-2" name="categoria" id="categoria">
-            {{#each categorias}}
-            <option value="{{_id}}">{{nome}}</option>
-            {{else}}
-            <option value="0">Nenhuma Categoria existente...</option>
-            {{/each}}
-        </select>
-        <br>
-        <label for="descricao">Descrição: </label>
-        <input class="form-control" type="text" id="descricao" name="descricao" placeholder="Descrição">
-        <label for="conteudo">Conteúdo: </label>
-        <textarea class="form-control" name="conteudo" id="conteudo" cols="30" rows="10"></textarea>
-
-        <button type="submit" class="btn btn-success mt-2">Criar</button>
-    </form>
-</div>
-</div>
+<form action="/admin/postagens/nova" method="POST">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="h4 text-center">Nova Postagem</h2>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label for="titulo" class="form-label">Titulo: </label>
+                    <input class="form-control form-control-sm" type="text" id="titulo" name="titulo"
+                        placeholder="Titulo">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="slug" class="form-label">Slug: </label>
+                    <input class="form-control form-control-sm" type="text" id="slug" name="slug" placeholder="Slug">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="categoria" class="form-label">Categorias: </label>
+                    <select class="form-select form-select-sm" name="categoria" id="categoria">
+                        {{#each categorias}}
+                        <option value="{{_id}}">{{nome}}</option>
+                        {{else}}
+                        <option value="0">Nenhuma Categoria existente...</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label for="descricao" class="form-label">Descrição: </label>
+                    <input class="form-control form-control-sm" type="text" id="descricao" name="descricao"
+                        placeholder="Descrição">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label for="conteudo" class="form-label">Conteúdo: </label>
+                    <textarea class="form-control form-control-sm" name="conteudo" id="conteudo" cols="30" rows="10"
+                        style="resize: none"></textarea>
+                </div>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-success mt-2">Criar Postagem</button>
+            </div>
+        </div>
+    </div>
+</form>
