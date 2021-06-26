@@ -4,7 +4,7 @@ Blog com sistema de postagens, usuarios, validação e controle de acesso via ad
 
 Hospedado em heroku: https://quiet-badlands-17299.herokuapp.com/usuarios/registro
 
-Sistema de postagem, usuarios, validação entre admin/outros usuarios, session
-
-Esse projeto foi desenvolvido com as seguintes tecnologias: HTML CSS JavaScript NodeJS(express,mongoose,passport,handlebars)
+Esse projeto foi desenvolvido com as seguintes tecnologias: 
+Frontend: HTML,CSS,JavaScript 
+Backend: NodeJS(express,mongoose,passport,handlebars)
 Base de Dados: MongoDB
