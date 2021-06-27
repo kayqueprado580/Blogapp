@@ -149,7 +149,7 @@ router.get("/postagens/add", eAdmin, (req, res) => {
     }).catch((err) => {
         req.flash("error_msg", "Erro ao carregar formulario")
         console.log("Erro: " + err)
-        res.redirect('/admin/postagens')
+        res.redirect('/')
     })
 })
 
@@ -189,11 +189,11 @@ router.post('/postagens/nova', eAdmin, (req, res) => {
         new Postagem(novaPostagem).save().then(() => {
             req.flash("success_msg", "Postagem Criada com Sucesso!")
             console.log('insert success')
-            res.redirect('/admin/postagens')
+            res.redirect(`/postagem/${req.body.slug}`)
         }).catch((err) => {
             req.flash("error_msg", "Error")
             console.log("Erro: " + err)
-            res.redirect('/admin/postagens')
+            res.redirect('/')
         })
     }
 })
